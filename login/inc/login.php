@@ -6,7 +6,7 @@ view('top');
 
 <fieldset>
     <legend>Login</legend>
-    <form action="http://localhost/-delfinai-php-/login/login.php" method="post">
+    <form action="<?=URL?>login" method="post">
         Name: <input type="text" name="name" />
         Password: <input type="password" name="psw">
         <button type="submit">Login</button>

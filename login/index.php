@@ -1,6 +1,6 @@
 <?php
 session_start();
-define('INSTAL', '/-delfinai-php-/login/');
+define('INSTALL', '/-delfinai-php-/login/');
 define('DIR', __DIR__. '/');
 define('URL', 'http://localhost/-delfinai-php-/login/');
 
@@ -15,23 +15,39 @@ router();
 function router(){
 
     $url =  $_SERVER['REQUEST_URI'];
-    $url = str_replace(INSTAL, '', $url);
+    $url = str_replace(INSTALL, '', $url);
     $url = explode('/', $url);
     $method = $_SERVER['REQUEST_METHOD'];
 
     if($method == 'GET' && count($url) == 1 && $url[0] == 'login'){
+        if(isLogged()) {
+            redirect('');
+        }
         view('login');
-    }else if($method == 'POST' && count($url) == 1 && $url[0] == 'login'){
+    }
+    else if($method == 'POST' && count($url) == 1 && $url[0] == 'login'){
         doLogin();
-    }else if($method == 'GET' && count($url) == 1 && $url[0] == ''){
-        doLogin('home');
-    }else if($method == 'GET' && count($url) == 1 && $url[0] == 'client'){
+    }
+    else if($method == 'POST' && count($url) == 1 && $url[0] == 'logout'){
+        doLogout();
+    }
+    else if($method == 'GET' && count($url) == 1 && $url[0] == ''){
+        view('home');
+    }
+    else if($method == 'GET' && count($url) == 1 && $url[0] == 'client'){
         if(!isLogged()){
             redirect('login');
         }
         view('client');
     }
-       echo '404';   // require DIR . 'inc/' . 'home.php';
+    else {
+        echo '404';
+    }
+
+
+    // require DIR . 'inc/' . 'home.php';
+
+    
 };
 
 function view($tmp){
@@ -60,9 +76,24 @@ function doLogin(){
             if($user['pass'] == md5($_POST['psw'])){
                 $_SESSION['login'] = 1;
                 $_SESSION['user'] = $user;
+                makeMsg('skyblue', 'Sveikas atvykes');
                 redirect('client');
             }
         }
     }
+    makeMsg('crimson', 'Viskas labai blogai');
     redirect('login');
+};
+
+function doLogout(){
+
+    unset($_SESSION['login'], $_SESSION['user']);
+    redirect('login');
+
+};
+
+function makeMsg($type, $text){
+
+    $_SESSION['msg'] = ['type' => $type, 'text' => $text];
+
 };
