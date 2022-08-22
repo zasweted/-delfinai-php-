@@ -7,8 +7,14 @@ echo '<pre>';
 require __DIR__ . '/Telikas.php';
 require __DIR__ . '/Kibiras2.php';
 
-$stu1 = new Kibiras2;
-$stu2 = new Kibiras2;
+$stu1 = Kibiras2::naujasKibiras();
+$stu2 = Kibiras2::naujasKibiras();
+// $stu3 = clone($stu1);
+// $stu4 = unserialize(serialize($stu1));
+var_dump($stu1);
+var_dump($stu2);
+// var_dump($stu3);
+// var_dump($stu4);
 
 $stu1->prideti1Akmeni();
 $stu1->prideti1Akmeni();
@@ -22,3 +28,5 @@ echo 'stu2:'. $stu2->kiekPririnktaAkmenu();
 
 echo "\n";
 echo 'VISO:' . $stu2->kiekBendraiYraAkmenu();
+echo "\n";
+echo 'VISO:' . Kibiras2::kiekYraAkmenu();
