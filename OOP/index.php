@@ -1,18 +1,24 @@
 <?php
 echo '<pre>';
-require __DIR__ . '/Nso.php';
-require __DIR__ . '/Tv.php';
+// $tv1 = new Telikas(55);
+// print_r($tv1->showList());
 
-$nso1 = new Nso;
+// var_dump($tv1);
+require __DIR__ . '/Telikas.php';
+require __DIR__ . '/Kibiras2.php';
 
-$tv1 = new Tv('Pink', '40"');
+$stu1 = new Kibiras2;
+$stu2 = new Kibiras2;
+
+$stu1->prideti1Akmeni();
+$stu1->prideti1Akmeni();
+$stu1->prideti1Akmeni();
+$stu1->pridetiDaugAkmenu(3);
+$stu2->prideti1Akmeni();
+
+echo 'stu1:'. $stu1->kiekPririnktaAkmenu();
 echo "\n";
-$tv1->showParams();
+echo 'stu2:'. $stu2->kiekPririnktaAkmenu();
 
-
-$tv1->channel;
-
-
-echo $tv1->size;
 echo "\n";
-echo $tv1->size = 'asdfasdfadsf';
+echo 'VISO:' . $stu2->kiekBendraiYraAkmenu();
