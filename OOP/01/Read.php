@@ -2,7 +2,7 @@
 namespace Petro;
 class Read {
 
-    public function funBook() : string
+    public function funBook()
     {
         return 'Oh yes, nice!';
     }

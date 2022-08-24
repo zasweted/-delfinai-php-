@@ -2,7 +2,7 @@
 namespace Antano;
 class Read {
 
-    public function sadBook() : string
+    public function sadBook()
     {
         return 'Bee, very sad!';
     }

@@ -1,0 +1,16 @@
+{
+    "name": "zaswe/oop",
+    "description": "blabla",
+    "autoload": {
+        "psr-4": {
+            "Zaswe\\Oop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleksandr Vasiljev",
+            "email": "zaswet@gmail.com"
+        }
+    ],
+    "require": {}
+}
