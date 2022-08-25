@@ -3,7 +3,9 @@
     "description": "blabla",
     "autoload": {
         "psr-4": {
-            "Zaswe\\Oop\\": "src/"
+            "Petro\\": "01/",
+            "Antano\\Belekas\\": "02/",
+            "": "01/"
         }
     },
     "authors": [

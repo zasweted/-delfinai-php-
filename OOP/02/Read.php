@@ -1,5 +1,6 @@
 <?php
-namespace Antano;
+namespace Antano\Belekas;
+
 class Read {
 
     public function sadBook()
