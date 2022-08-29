@@ -19,10 +19,15 @@ class App {
         array_shift($url);
         $method = $_SERVER['REQUEST_METHOD'];
         
-        print_r($url);
         if($method == 'GET' && count($url) == 1 && $url[0] == ''){
             return((new H)->home());
         }
+    }
+
+    public static function view(string $name, array $data=[])
+    {
+        extract($data);
+        require DIR . 'resources/view/' . $name . '.php';
     }
 
 }
