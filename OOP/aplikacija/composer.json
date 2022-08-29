@@ -1,0 +1,17 @@
+{
+    "name": "zaswe/aplikacija",
+    "description": "app",
+    "type": "n",
+    "autoload": {
+        "psr-4": {
+            "": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleksandr Vasiljev",
+            "email": "zaswet@gmail.com"
+        }
+    ],
+    "require": {}
+}
