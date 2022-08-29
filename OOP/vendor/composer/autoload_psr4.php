@@ -8,5 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Petro\\' => array($baseDir . '/01'),
     'Antano\\Belekas\\' => array($baseDir . '/02'),
-    '' => array($baseDir . '/01'),
+    '' => array($baseDir . '/'),
 );

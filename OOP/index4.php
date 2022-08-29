@@ -19,3 +19,12 @@ $z2 = new Tenisininkas('Petras');
 
 
 Tenisininkas::zaidimoPradzia();
+
+$z1->perduotiKamuoliuka();
+$z2->perduotiKamuoliuka();
+$z1->perduotiKamuoliuka();
+$z2->perduotiKamuoliuka();
+$z1->perduotiKamuoliuka();
+$z2->perduotiKamuoliuka();
+$z1->perduotiKamuoliuka();
+$z2->perduotiKamuoliuka();
