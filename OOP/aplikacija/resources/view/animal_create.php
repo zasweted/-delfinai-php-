@@ -27,6 +27,7 @@ App\App::view('top', ['title'=> $title]);
                             <label class="form-check-label">Has tail?</label>
                         </div>
                         <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                        <a class="btn btn-primary mt-5" href="<?= URL ?>">Home</a>
                     </form>
                 </div>
             </div>

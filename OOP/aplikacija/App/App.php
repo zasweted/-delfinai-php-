@@ -29,6 +29,9 @@ class App {
         if($method == 'POST' && count($url) == 2 && $url[0] == 'animals' && $url[1] == 'store'){
             return((new A)->store());
         }
+        if($method == 'GET' && count($url) == 1 && $url[0] == 'animals'){
+            return((new A)->list());
+        }
     }
 
     public static function view(string $name, array $data=[])
