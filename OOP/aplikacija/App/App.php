@@ -26,12 +26,20 @@ class App {
         if($method == 'GET' && count($url) == 2 && $url[0] == 'animals' && $url[1] == 'create'){
             return((new A)->create());
         }
+        if($method == 'POST' && count($url) == 2 && $url[0] == 'animals' && $url[1] == 'store'){
+            return((new A)->store());
+        }
     }
 
     public static function view(string $name, array $data=[])
     {
         extract($data);
         require DIR . 'resources/view/' . $name . '.php';
+    }
+
+    public static function redirect(string $where)
+    {
+        header('Location: '. URL . $where);
     }
 
 }
