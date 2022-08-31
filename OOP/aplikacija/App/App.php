@@ -32,6 +32,12 @@ class App {
         if($method == 'GET' && count($url) == 1 && $url[0] == 'animals'){
             return((new A)->list());
         }
+        if($method == 'GET' && count($url) == 3 && $url[0] == 'animals' && $url[1] == 'edit'){
+            return((new A)->edit($url[2]));
+        }
+        if($method == 'POST' && count($url) == 3 && $url[0] == 'animals' && $url[1] == 'update'){
+            return((new A)->update($url[2]));
+        }
     }
 
     public static function view(string $name, array $data=[])

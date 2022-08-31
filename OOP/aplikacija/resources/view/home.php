@@ -11,11 +11,6 @@
                 <div class="card-header">
                     <h3><?=$welcome?></h3>
                 </div>
-                <div class="card-body">
-
-                    <a class="btn btn-primary mt-5" href="<?= URL ?>animals/create">Create</a>
-                    <a class="btn btn-primary mt-5" href="<?= URL ?>animals">List</a>
-                </div>
             </div>
         </div>
     </div>
