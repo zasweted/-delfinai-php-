@@ -30,7 +30,9 @@ App\App::view('top', ['title'=> $title]);
                                 <div class="line__buttons">
                                     <a href="<?=URL . 'animals/edit/' . $animal['id']?>" type="button"
                                         class="btn btn-outline-success">Edit</a>
-                                    <a href="<?=URL?>" type="button" class="btn btn-outline-danger">Delete</a>
+                                        <form action="<?= URL ?>animals/delete/<?=$animal['id']?>" method="post">
+                                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                        </form>
                                 </div>
                             </div>
                         </li>

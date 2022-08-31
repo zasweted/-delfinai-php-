@@ -23,7 +23,7 @@ App\App::view('top', ['title'=> $title]);
                             <small class="form-text text-muted">Animal weight in kg</small>
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" name="tail" <?= $animal['tail'] ? 'checked' : '' ?>" class="form-check-input">
+                            <input type="checkbox" name="tail" <?= $animal['tail'] ? 'checked' : '' ?> class="form-check-input">
                             <label class="form-check-label">Has tail?</label>
                         </div>
                         <button type="submit" class="btn btn-primary mt-5">Submit</button>

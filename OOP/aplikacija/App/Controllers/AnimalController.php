@@ -43,7 +43,14 @@ class AnimalController {
             'tail' => isset($_POST['tail']) ? 1 : 0
         ]);
 
-        return App::redirect('');
+        return App::redirect('animals');
+    }
+
+    public function delete(int $id)
+    {
+        Json::connect()->delete($id);
+
+        return App::redirect('animals');
     }
 
 }
