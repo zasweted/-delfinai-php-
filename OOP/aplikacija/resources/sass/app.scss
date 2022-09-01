@@ -60,10 +60,13 @@
     border-radius: 10px;
     color: #fff;
     font-size: 25px;
+    min-width: 500px;
+    text-align: center;
 }
 
 .msg-bin {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     width: 100%;
