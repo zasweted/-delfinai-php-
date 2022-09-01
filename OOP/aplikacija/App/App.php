@@ -49,6 +49,9 @@ class App {
             return((new A)->delete($url[2]));
         }
         if($method == 'GET' && count($url) == 1 && $url[0] == 'login'){
+            if(Auth::isLoged()){
+                return self::redirect('');
+            }
             return((new L)->login());
         }
         if($method == 'POST' && count($url) == 1 && $url[0] == 'login'){

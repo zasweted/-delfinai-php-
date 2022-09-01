@@ -10939,3 +10939,33 @@ textarea.form-control-lg {
   align-items: center;
   gap: 10px;
 }
+
+.user-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.user-nav .name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.nav-link {
+  padding: 15px 10px;
+}
+
+.msg {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.msg-bin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

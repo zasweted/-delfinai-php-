@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\App;
 use App\DB\Json;
+use App\Services\Messages as M;
 
 class LoginController {
 
@@ -29,6 +30,7 @@ class LoginController {
                 if($user['pass'] == md5($_POST['pass'])){
                     $_SESSION['login'] = 1;
                     $_SESSION['user'] = $user;
+                    M::makeMsg('lime', 'You are beutiful');
                     return App::redirect('animals');
                 }
             }

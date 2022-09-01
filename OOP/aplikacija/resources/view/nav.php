@@ -11,11 +11,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?=URL?>animals/create">New Animal</a>
                 </li>
+                <?php if(App\Middlewares\Auth::isLoged()) : ?>
                 <li class="nav-item">
-                    <form action="<?=URL?>logout" method="post">
-                        <button class="btn nav-link red" type="submit">Logout</button>
-                </form>
+                    <div class="user-nav">
+                        <div class="name"><?= $_SESSION['user']['name'] ?></div>
+                        <form action="<?=URL?>logout" method="post">
+                            <button class="btn nav-link red" type="submit">Logout</button>
+                        </form>
+                    </div>
                 </li>
+                <?php else : ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?=URL?>login">Login</a>
+                </li>
+
+                <?php endif ?>
             </ul>
         </div>
     </div>
