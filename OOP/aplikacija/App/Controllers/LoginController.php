@@ -11,12 +11,13 @@ class LoginController {
     {
         $title = 'Login';
 
-        App::view('login', ['title' => $title]);
+       return App::view('login', ['title' => $title]);
     }
 
     public function logout()
     {
-         
+         unset($_SESSION['login'], $_SESSION['user']);
+         return App::redirect('');
     }
 
     public function doLogin()

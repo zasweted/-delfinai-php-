@@ -11,6 +11,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?=URL?>animals/create">New Animal</a>
                 </li>
+                <li class="nav-item">
+                    <form action="<?=URL?>logout" method="post">
+                        <button class="btn nav-link red" type="submit">Logout</button>
+                </form>
+                </li>
             </ul>
         </div>
     </div>

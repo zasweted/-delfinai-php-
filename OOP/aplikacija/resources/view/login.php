@@ -11,7 +11,7 @@ App\App::view('top', ['title'=> $title]);
                     <h2>Login</h2>
                 </div>
                 <div class="card-body">
-                    <form action="<?= URL ?>animals/login" method="post">
+                    <form action="<?= URL ?>login" method="post">
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" name="name" class="form-control">
