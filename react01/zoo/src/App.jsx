@@ -5,6 +5,7 @@ import Create from './Components/Create';
 import List from './Components/List';
 import axios from 'axios';
 import Edit from './Components/Edit';
+import Msg from './Components/Msg';
 
 
 
@@ -15,6 +16,7 @@ function App() {
   const [deleteData, setDeleteData] = useState(null);
   const [editData, setEditData] = useState(null);
   const [lastUpdate, setLastUpdate] = useState(Date.now());
+  const [msg, setMsg] = useState(null);
 
 useEffect(() => {
   axios.get('http://animals.zoo/react/list')
@@ -28,6 +30,8 @@ useEffect(() => {
   axios.post('http://animals.zoo/react/list', createData)
   .then(res => {
     setLastUpdate(Date.now());
+    showMsg(res.data.msg);
+
   })
 }, [createData]);
 
@@ -51,6 +55,11 @@ useEffect(() => {
   })
 }, [editData]);
 
+const showMsg = msg => {
+  setMsg(msg);
+  setTimeout(() => setMsg(null), 3000)
+}
+
   return (
     <>
     <div className="container">
@@ -64,6 +73,7 @@ useEffect(() => {
       </div>
     </div>
     <Edit setModalData={setModalData} modalData={modalData} setEditData={setEditData}></Edit>
+    <Msg msg={msg}></Msg>
     </>
   );
 }
