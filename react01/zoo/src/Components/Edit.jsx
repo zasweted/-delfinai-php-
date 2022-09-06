@@ -8,13 +8,14 @@ function Edit({ setModalData, modalData, setEditData }) {
     const [tail, setTail] = useState(false);
 
     useEffect(() => {
-        if(modalData === null){
+        if(null === modalData){
             return;
         }
+        console.log(modalData);
         setType(modalData.type);
         setWeight(modalData.weight);
         setTail(modalData.tail);
-    }, [modalData])
+    }, [modalData]);
 
     const close = () => {
         setModalData(null);

@@ -49,6 +49,7 @@ useEffect(() => {
   if(null === editData){
     return;
   }
+  
   axios.put('http://animals.zoo/react/list/' + editData.id, editData)
   .then(res => {
     setLastUpdate(Date.now());

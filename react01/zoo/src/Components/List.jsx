@@ -7,7 +7,7 @@ function List({ list, setDeleteData, setModalData }) {
             setDeleteData({id});
         }
         const edit = a => {
-            setModalData({a});
+            setModalData(a);
         }
     if (list == null) {
         return <h2>Loading...</h2>
