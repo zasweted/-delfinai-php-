@@ -1,1 +1,84 @@
 @import "~bootstrap/scss/bootstrap";
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &__content {
+        margin: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &__type {
+            font-size: 28px;
+            color: #000;
+            margin-right: 10px;
+            line-height: 28px;
+            font-weight: bold;
+        }
+        &__weight {
+            font-size: 20px;
+            color: grey;
+            margin-right: 10px;
+            line-height: 28px;
+
+        }
+        &__tail {
+            width: 30px;
+            height: 30px;
+            background-color: crimson;
+        }
+    }
+    &__buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    
+    }
+}
+
+.user-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .name{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+}
+
+.nav-link{
+    padding: 15px 10px;
+}
+
+.msg {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 25px;
+    min-width: 500px;
+    text-align: center;
+}
+
+.msg-bin {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.modal {
+    display: block;
+    background-color: #00000099;
+    .close{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 28px;
+    }
+}
