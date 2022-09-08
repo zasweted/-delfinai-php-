@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NiceController as N;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/eziukas', fn() => '<h1>EZIUKAS<h1>');
+Route::get('/bebras', function () {return '<h1>BEBRAS<h1>';});
+
+Route::get('/fun/{kiek}/{abc?}', [N::class, 'fun']);
