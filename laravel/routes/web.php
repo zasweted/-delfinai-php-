@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NiceController as N;
+use App\Http\Controllers\BlogController as B;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,9 @@ Route::post('/suma', [N::class, 'doForm'])->name('calculate');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('blog')->group(function () {
+    Route::get('/', [B::class, 'index'])->name('index');
+    Route::get('/create', [B::class, 'create'])->name('create');
+    Route::post('/create', [B::class, 'store'])->name('store');
+});
