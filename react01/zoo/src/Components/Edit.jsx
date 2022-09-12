@@ -11,7 +11,6 @@ function Edit({ setModalData, modalData, setEditData }) {
         if(null === modalData){
             return;
         }
-        console.log(modalData);
         setType(modalData.type);
         setWeight(modalData.weight);
         setTail(modalData.tail);

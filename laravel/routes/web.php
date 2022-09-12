@@ -22,3 +22,9 @@ Route::get('/eziukas', fn() => '<h1>EZIUKAS<h1>');
 Route::get('/bebras', function () {return '<h1>BEBRAS<h1>';});
 
 Route::get('/fun/{kiek}/{abc?}', [N::class, 'fun']);
+
+Route::get('/suma', [N::class, 'showForm'])->name('form');
+Route::post('/suma', [N::class, 'doForm'])->name('calculate');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
