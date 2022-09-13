@@ -9,17 +9,18 @@
                     <h2>New Post</h2>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('store')}}" method="post">
+                    <form action="{{route('edit', $blog)}}" method="post">
                         <div class="mb-3">
                             <label for="titleText" class="form-label">Title</label>
-                            <input value="{{old('title')}}" name="title" type="text" class="form-control" id="titleText" aria-describedby="emailHelp">
+                            <input value="{{old('title', $blog->title)}}" name="title" type="text" class="form-control" id="titleText">
                         </div>
                         <div class="mb-3">
                             <label for="postText" class="form-label">Post</label>
-                            <textarea row="5" name="post" type="text" class="form-control">{{old('post')}}</textarea>
+                            <textarea rows="5" name="post" type="text" class="form-control">{{old('post', $blog->post)}}</textarea>
                         </div>
                         @csrf
-                        <button type="submit" class="btn btn-warning">Create</button>
+                        @method('put')
+                        <button type="submit" class="btn btn-warning">Update</button>
                     </form>
                 </div>
             </div>

@@ -6,3 +6,41 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+
+.posts-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .content {
+        h2 {
+            color: crimson;
+            margin: 0;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+
+        button,
+        form,
+        a {
+            margin: 5px 10px;
+            width: 90px;
+            display:block;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+        button{
+            transform: translate(2deg);
+        }
+    }
+
+}
