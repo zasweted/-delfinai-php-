@@ -6,6 +6,7 @@
     Y: <input type="text" name="y"><br /><br />
     <button type="submit">Calculate</button>
     @csrf
+    
 </form>
 {{-- @if($result != 'TUSCIA')
 <div><h2>{{$result}}</h2></div>
