@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Str;
+use Illuminate\Support\Str;
 use Faker\Factory as F;
 class DatabaseSeeder extends Seeder
 {
@@ -29,7 +28,7 @@ class DatabaseSeeder extends Seeder
         ]);
         $mc = 20;
 
-        $faker = F::create('den_DEN');
+        $faker = F::create('pl_PL');
         foreach(range(1, $mc) as $_){
             DB::table('mechanics')->insert([
                 'name' => $faker->firstName(),

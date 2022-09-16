@@ -16,12 +16,13 @@ use App\Http\Controllers\TruckController as T;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->name('wc');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
 
 
 Route::prefix('mechanic')->name('m_')->group(function () {

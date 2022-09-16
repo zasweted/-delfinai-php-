@@ -15,6 +15,7 @@ class MechanicController extends Controller
     public function index()
     {
         $mechanics = Mechanic::all();
+        
         return view('mechanic.index', [
             'mechanics' => $mechanics
         ]);

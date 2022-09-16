@@ -29,7 +29,7 @@
                         <select name="mechanic_id" class="form-select mb-3">
                             <option value="0">Choose mechanic</option>
                             @foreach($mechanics as $mechanic)
-                                <option value="{{ $mechanic->id }} {{ $mechanic->name }} {{ $mechanic->surname }}"></option>
+                                <option value="{{ $mechanic->id }}"> {{ $mechanic->name }} {{ $mechanic->surname }}</option>
                             @endforeach
                         </select>
                         @csrf

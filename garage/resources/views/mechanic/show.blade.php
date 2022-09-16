@@ -14,7 +14,7 @@
                         <h5>{{$mechanic->surname}}</h5>
                     </div>
                     <ul class="list-group">
-                        @forelse($mechanic-getTrucks() as $truck)
+                        @forelse($mechanic->getTrucks as $truck)
                         <li class="list-group-item">
                             <div class="trucks-list">
                                 <div class="content">
@@ -24,7 +24,7 @@
                             </div>
                         </li>
                         @empty
-                        <li class="list-group-item">No Mechanics</li>
+                        <li class="list-group-item">No Trucks Assigned</li>
                         @endforelse
                     </ul>
                 </div>
