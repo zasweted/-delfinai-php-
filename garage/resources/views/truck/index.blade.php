@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-9">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     <h2>Trucks</h2>
@@ -20,6 +20,9 @@
                                     <span>Mechanic: </span>
                                     <a href="{{ route('m_show', $truck->getMechanic->id) }}">{{$truck->getMechanic->name}} {{$truck->getMechanic->surname}}</a>
                                     </h5>
+                                    @if($truck->photo)
+                                    <h5>Click on &nbsp;>><a style="color:crimson" href="{{ $truck->photo }}" target="_BLANK"> Photo </a><<&nbsp; to see Photo</h5>
+                                    @endif
                                 </div>
                                 <div class="buttons">
                                     <a href="{{route('t_show', $truck)}}" class="btn btn-info">Show</a>
