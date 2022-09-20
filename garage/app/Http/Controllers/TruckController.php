@@ -29,7 +29,9 @@ class TruckController extends Controller
      */
     public function create()
     {
-        $mechanics = Mechanic::all();
+
+        $mechanics = Mechanic::orderBy('name')->orderBy('surname', 'desc')->get();
+        
         return view('truck.create', [
             'mechanics' => $mechanics
         ]);
@@ -90,7 +92,9 @@ class TruckController extends Controller
      */
     public function edit(Truck $truck)
     {
+        
         $mechanics = Mechanic::all();
+
         return view('truck.edit', [
             'mechanics' => $mechanics,
             'truck' => $truck
