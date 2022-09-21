@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         ]);
         $mc = 20;
 
-        $faker = F::create('lt_LT');
+        $faker = F::create('pl_PL');
         foreach(range(1, $mc) as $_){
             DB::table('mechanics')->insert([
                 'name' => $faker->firstName(),
